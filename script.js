@@ -3,26 +3,42 @@ function calculateMajor() {
 var majorName = document.getElementById("major").value;
 var out; 
   
-var majorPoints = [ArtPoints = 0, LanguagePoints =0] // Array for points
-  
-// Different switch questions. Different answers will add different points
-switch(majorName) 
+// This is a dicitionary. Key : value. So art, language, math, are keys that are associated to 0, 0, 2. To get a value, do majorPoints[key]. 
+ // So for example, majorPoints[art] = 0. majorPoints[math] = 2; 
+var majorPoints = {
+  "art" : 0,
+  "language" : 0,
+  "math" : 2
+}
+
+
+
+ 
+switch(majorName)
   {
     case "Aerospace Engineering": 
-      majorPoints[0]++
+      majorPoints[art]++
     //  out = "Philosophy";
       break;
     case "Computer Science":
-      majorPoints[0]++
-      
-     // out = "Gender Studies";
+      majorPoints[language]++
       break;
     default: 
-   //   out = "JUST DROP OUT!";
-      ;   
+            majorPoints[math]++;   
   }
   
-out = majorPoints[0];
+var maxValue = -1;
+var maxMajor = null;
+for (var key in majorPoints) {
+  
+  if (majorPoints[key] > maxValue) {
+    maxValue = majorPoints[key];
+    maxMajor = key;
+  }
+}
+  
+out = maxMajor;
+  
 document.getElementsByName('output')[0].value= out;
 
 }
