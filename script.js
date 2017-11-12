@@ -8,7 +8,7 @@ var out;
 var majorPoints = {
   "art" : 0,
   "language" : 0,
-  "math" : 2
+  "math" : 0
 }
 
 
@@ -17,14 +17,14 @@ var majorPoints = {
 switch(majorName)
   {
     case "Aerospace Engineering": 
-      majorPoints[art]++
+      majorPoints["art"]++
     //  out = "Philosophy";
       break;
     case "Computer Science":
-      majorPoints[language]++
+      majorPoints["language"]++
       break;
     default: 
-            majorPoints[math]++;   
+            majorPoints["math"]++;   
   }
   
 var maxValue = -1;
