@@ -6,9 +6,12 @@ var out;
 // This is a dicitionary. Key : value. So art, language, math, are keys that are associated to 0, 0, 2. To get a value, do majorPoints[key]. 
  // So for example, majorPoints[art] = 0. majorPoints[math] = 2; 
 var majorPoints = {
-  "art" : 0,
-  "language" : 0,
-  "math" : 0
+  "history" : 0,
+  "intellectual" : 0,
+  "arts/media" : 0,
+  "money" : 0,
+  "environmental" : 0
+  
 }
 
 
