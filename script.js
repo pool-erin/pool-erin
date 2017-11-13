@@ -11,8 +11,8 @@ var majorPoints = {
   "arts/media" : 0,
   "money" : 0,
   "environmental" : 0
-  
 }
+
 //class points
 majorPoints["history"]+=document.getElementById("Physics1C").checked;
 majorPoints["history"]+=document.getElementById("Chem20L").checked;
@@ -39,6 +39,7 @@ majorPoints["intellectual"]+=document.getElementById("rick").checked;
 majorPoints["intellectual"]+=document.getElementById("arguments").checked;
 majorPoints["intellectual"]+=document.getElementById("socialism").checked;
 majorPoints["intellectual"]+=document.getElementById("psych").checked;
+majorPoints["intellectual"]+=document.getElementById("eng").checked;
 // arts/media
 majorPoints["arts/media"]+=document.getElementById("thirsty").checked;
 majorPoints["arts/media"]+=document.getElementById("playdough").checked;  
@@ -53,6 +54,13 @@ majorPoints["money"]+=document.getElementById("Bitcoin").checked;
 majorPoints["money"]+=document.getElementById("yeezys").checked;
 majorPoints["money"]+=document.getElementById("sharktank").checked;
 majorPoints["money"]+=document.getElementById("401K").checked;
+// environmental
+majorPoints["environmental"]+=document.getElementById("bplate").checked; 
+majorPoints["environmental"]+=document.getElementById("vegan").checked;
+majorPoints["environmental"]+=document.getElementById("calpirg").checked;
+majorPoints["environmental"]+=document.getElementById("hydro").checked;
+majorPoints["environmental"]+=document.getElementById("teeth").checked; 
+majorPoints["environmental"]+=document.getElementById("brake").checked;
   
 switch(majorName)
   {
@@ -66,6 +74,10 @@ switch(majorName)
     default: 
             majorPoints["math"]++;   
   }
+ 
+var randomNumber = Math.floor(Math.random() * 6);
+
+  
   
 var maxValue = -1;
 var maxMajor = null;
@@ -77,8 +89,8 @@ for (var key in majorPoints) {
   }
 }
   
-out = maxMajor;
-  
+//out = maxMajor;
+out = randomNumber; 
 document.getElementsByName('output')[0].value= out;
 
 }
