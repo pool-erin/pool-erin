@@ -121,7 +121,7 @@ case 6 :
 out = "Asian Studies";
 break;
 case 7 :
-out = "Central and Eadt European Languages and Cultures";
+out = "Central and East European Languages and Cultures";
 break;
 case 8 :
 out = "Chicana and Chicano Studies";
