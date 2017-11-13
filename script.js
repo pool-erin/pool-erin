@@ -13,7 +13,8 @@ var majorPoints = {
   "environmental" : 0
 }
 
-//class points
+//class points 
+
 majorPoints["history"]+=document.getElementById("Physics1C").checked;
 majorPoints["history"]+=document.getElementById("Chem20L").checked;
 majorPoints["intellectual"]+=document.getElementById("CS31").checked;
@@ -75,10 +76,9 @@ switch(majorName)
             majorPoints["math"]++;   
   }
  
-var randomNumber = Math.floor(Math.random() * 6);
 
   
-  
+var randint;  
 var maxValue = -1;
 var maxMajor = null;
 for (var key in majorPoints) {
@@ -88,9 +88,238 @@ for (var key in majorPoints) {
     maxMajor = key;
   }
 }
+
+  
+switch (maxMajor)
+{
+  case "history" :
+
+randint = Math.floor(Math.random() * 23);
+
+switch(randint)
+{
+
+case 0  : 
+out = "African American Studies";
+break;
+case 1 :
+out = "African ans Middle Eastern Studies";
+break;
+case 2 :
+out = "American Indian Studies";
+break;
+case 3 :
+out ="American Literature and Culture";
+break;
+case 4 :
+out = "Ancient Near Eat and Egyptology";
+break;
+case 5 :
+out = "Asian American Studies";
+break;
+case 6 :
+out = "Asian Studies";
+break;
+case 7 :
+out = "Central and Eadt European Languages and Cultures";
+break;
+case 8 :
+out = "Chicana and Chicano Studies";
+break;
+case 9 :
+out = "Classical Civilization";
+break;
+case 10 :
+out = "German";
+break;
+case 11 :
+out = "Global Studies";
+break;
+case 12 :
+out = "Greek";
+break;
+case 13:
+out = "Japanese";
+break;
+case 14 :
+out = "Jewish Studies";
+break;
+case 15 :
+out = "Korean";
+break;
+case 16 :
+out = "Latin";
+break;
+case  17:
+out ="Latin American Studies";
+break;
+case 18 :
+out = "Middle Eastern Studies";
+break;
+case 19 :
+out = "Portuguese";
+break;
+case 20 :
+out = "Russian Language and Literature";
+break;
+case 21:
+out = "Scandinavian Languages and Cultures";
+break;
+case  22:
+out = "Spanish and Community and Culture";
+break;
+default: out = "Drop out"
+
+
+}
+
+break;
+  case "intellectual" :
+randint = Math.floor(Math.random() * 7);
+
+switch(randint)
+{
+
+case 0:
+out = "Philosophy";
+break;
+
+case 1:
+out = "Sociology";
+break;
+
+case 2:
+out = "Anthropology";
+break;
+
+case 3:
+out = "Psychology";
+break;
+
+case 4:
+out = "Linguistics";
+break;
+
+case 5:
+out = "English";
+break;
+
+case 6:
+out = "Political Science";
+break;
+
+
+
+}
+
+
+break;
+  case "arts/media" :
+randint = Math.floor(Math.random() * 9);
+
+switch(randint)
+{
+
+case 0:
+out = "Music History";
+break;
+
+case 1:
+out = "Music";
+break;
+
+case 2:
+out = "Ethnomusicology";
+break;
+
+case 3:
+out = "Film and Television";
+break;
+
+case 4:
+out = "Theater";
+break;
+
+case 5:
+out = "Communication";
+break;
+
+case 6:
+out = "Art";
+break;
+
+case 7:
+out = "Dance";
+break;
+
+case 8:
+out = "Design/Media Arts";
+break;
+
+
+}
+
+
+
+
+break;
+  case "money" :
+randint = Math.floor(Math.random() * 4);
+
+switch(randint)
+{
+
+case 0: out = "Business Economics"; 
+break;
+
+case 1: out = "Economics";
+break;
+
+case 2: out = "Applied Economics";
+break;
+
+case 3: out = "Financial Actuarial Mathematics"; 
+break;
+}
+
+
+
+break;
+  case "environmental" :
+randint = Math.floor(Math.random() * 5);
+
+switch (randint)
+{
+
+case 0: out = "Urban Planning";
+break;
+
+case 1: out = "Earth and Environmental Science";
+break;
+
+case 2: out = "Ecology, Behavior, and Evolution";
+break;
+
+case 3: out = "Geography and Environmental Studies";
+break;
+
+case 4: out = "Geography"; 
+break;
+
+}
+
+
+break;
+
+
+
+}  
+  
+  
+ 
   
 //out = maxMajor;
-out = randomNumber; 
+//out = 5; 
 document.getElementsByName('output')[0].value= out;
-
+ 
 }
