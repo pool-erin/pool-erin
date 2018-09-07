@@ -26,7 +26,7 @@ h1{
 body {
     padding: 1rem;
     cursor:url(art/cursorsm.png), auto;
-    background-image: url("art/waterlilies.jpg");
+    background-image: url("waterlilies.jpg");
     font-family: 'Shadows Into Light Two', cursive;
     background-repeat: no-repeat;
     background-position: center top;
